@@ -19,12 +19,14 @@ int main() {
   arq = fopen("arquivo.txt", "r");
 
   if(arq){
-    while((c = gets(arq)) != EOF){
-      printf("%c", &c);
+    while((c = getc(arq)) != EOF){// EOF = End of File
+      printf("%c", c);
     }
   }else{
     printf("Não achei o arquivo!");
   }
 
+  fclose(arq);
+   
   return 0;
 }
