@@ -81,8 +81,40 @@ int main () {
   // Define codificação como sendo UTF-8
   SetConsoleOutputCP(CPAGE_UTF8);
  /*********************************************************************/
+   char nome[50];
+   printf("Qual seu nome? ");
+   gets(nome);
+   printf("Olá %s\n", nome);
 
+  char letras[26];
+  int contador = 0;
 
+  for (int i = 97; i <= 122; i++) {
+    letras[contador] = i;
+    contador = contador + 1;
+  }
+  for (int i = 0; i < 26; i++) {
+    printf("%d == %c\n", letras[i], letras[i]);
+  }
+
+  int valores[5][5], i, j;
+
+  printf("\nDigite valor para os elementos da matriz\n\n");
+  
+  for (int i = 0; i < 5; i++) {
+    for(int j = 0; j < 5; j++) {
+      printf("\nnumeros[%d][%d] = ", i, j);
+      scanf("%d", &valores[i][j]);
+    }
+  }
+
+  printf("\n\n******************* Saida de Dados ********************* \n\n");
+  
+  for (int i = 0; i < 5; i++);
+    for (int j=0; j < 5; j++);
+    {
+      printf ("\nElemento[%d][%d] = %d\n", i, j, valores[ i ][ j ]);
+    }
 
   // Retorna codificação padrão do Windows
   SetConsoleOutputCP(CPAGE_DEFAULT);
