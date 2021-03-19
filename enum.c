@@ -20,7 +20,7 @@ int main() {
   if(d1 == d2){
     printf("Os dois iguais\n");
   }else {
-    printf("Os nao iguais\n");
+    printf("Os nao sao iguais\n");
   }
 
   return 0;
